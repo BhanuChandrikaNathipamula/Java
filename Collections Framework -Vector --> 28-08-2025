@@ -1,0 +1,48 @@
+// Collections Framework    1.Vector
+
+
+import java.util.*;
+public class VPractice
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+// Adding the Elements :
+     	Vector v1 = new Vector();
+   	        v1.add("Bhanu");
+	          v1.add("Chandrika");
+	          v1.add("gayathri");
+            v1.add(0,"Srinivas");          // using Index value
+    	Vector v2 = new Vector();
+			      v2.add("Bha");
+	          v2.add("chandu");
+          	v2.add("gaya");
+	          v1.addAll(v2);           
+	        //v1.addAll(0, v2);
+          	System.out.println(v1);     // 1
+ // Retrieval of Elements :
+    	     System.out.println(v1.get(2));    // only option to get the elements is Index value -- >  2
+ // Deletion of Elements :
+        	v1.remove(1);        
+          	 System.out.println(v1);     // 3
+          v1.remove("Bha");   
+             System.out.println(v1);     // 4
+          v1.removeAll(v2);   
+             System.out.println(v1);     // 5
+          v1.clear();    
+             System.out.println(v1);     // 6
+		         System.out.println(v2);     // 7
+	// Vertification of Elements :
+           	System.out.println(v2.contains("chandu"));     // 8
+	          System.out.println(v1.containsAll(v2));        // 9
+  // Updation of Elements :  
+                 v2.set(1,"Sathish");                    
+	               System.out.println(v2.get(1));            // 10
+        	       System.out.println(v2);                   // 11
+	
+
+	}
+}
+Output 1 : [Srinivas, Bhanu, chandrika, gayathri, Bha, chandu, gaya]   ,  2 . Chandrika  , 3 . [Srinivas, chandrika, gayathri, Bha, chandu, gaya]
+  4 . [Srinivas, chandrika, gayathri, chandu, gaya]   , 5 . [Srinivas, chandrika, gayathri] ,  6 . []  , 7 . [Bha, chandu, gaya]  , 8 . true  ,  9 . false
+  10. Sathish , 11. [Bha, Sathish, gaya]
+
