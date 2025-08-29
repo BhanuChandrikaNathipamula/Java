@@ -1,0 +1,43 @@
+import java.util.*;
+public class ALPractice {
+	public static void main(String[] args) {
+		ArrayList<Integer> al1 = new ArrayList<>();
+		//Adding the Elements :
+		      al1.add(12);
+      		al1.add(14);
+	      	al1.add(18);
+       		al1.add(2,16);   // using index value
+	     	System.out.println(al1);   //12 14 16 18 
+		ArrayList<Integer> al2 = new ArrayList<>();
+	       	al2.add(2);
+	      	al2.add(4);
+		      al2.add(6);
+	      	al2.add(8);
+	      	al1.addAll(al2);   
+	      	System.out.println(al1);      
+	      	System.out.println(al1.size());  
+		//Retrieval of Elements :
+		     System.out.println(al1.get(3));   
+		//Deletion of Elements:
+		     al1.removeAll(al2); 
+		     System.out.println(al1);
+	       al2.clear();
+		     System.out.println(al2); 
+		//Verification of Elements :
+	       	 System.out.println(al1.contains(18));
+	      	System.out.println(al1.contains(al2));
+	     //Updation of Elements : 
+		        al1.set(0, 10);
+	        	 al1.get(0);  
+	       	 System.out.println(al1); 
+	}
+}
+   OUTPUT:   [12, 14, 16, 18]
+             [12, 14, 16, 18, 2, 4, 6, 8]
+             8
+             18
+             [12, 14, 16, 18]
+             []
+             true
+             false
+             [10, 14, 16, 18]
