@@ -1,0 +1,43 @@
+import java.util.*;
+class Spractice;
+{
+	public static void main (String[] args) {
+	   Stack<String> books = new Stack<>();
+	   // Adding the Elements :
+	   books.add("Black");
+	   books.add("Blue");
+	   books.add("White");
+	   System.out.println(books);  // Anticlockwise --> White , Blue , Black
+	  // Retrieval of Elements :
+	       System.out.println(books.get(2));
+	  //Deletion :
+	       books.remove(1);
+    	   System.out.println(books); 
+	  //Verification :
+	       System.out.println(books.contains("Black"));
+	  // Updation :
+       	books.set(0,"grey");
+     	  System.out.println(books); 
+     	 
+     	 // Special methods of Stack :
+     	  //1.Push :  Same as add operation , 2. pop , 3. peek , 4. Search
+          	  books.push("Black");
+     	        System.out.println(books);
+           	  System.out.println(books.pop());
+     	        System.out.println( books.search("grey"));
+     	        System.out.println(books.peek());
+     	        System.out.println(books); 
+     	        System.out.println(books.indexOf("White"));   	   
+}
+}
+OUTPUT:   [Black, Blue, White]
+          White
+         [Black, White]
+         true
+         [grey, White]
+         [grey, White, Black]
+         Black
+         2
+         White
+         [grey, White]
+          1
