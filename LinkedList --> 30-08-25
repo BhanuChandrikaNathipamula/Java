@@ -1,0 +1,35 @@
+import java.util.*;
+public class LLPractice {
+	public static void main (String[] args) 	{
+		ArrayList<String> al = new ArrayList<>();
+	        al.add("S1");
+	        al.add("S2");       
+	  LinkedList<String> ll =  new LinkedList<>();
+	  // Adding of Elements :
+	        ll.add("XY");
+	        ll.add("YY");
+	        ll.add("YZ");
+	        ll.addAll(0, al);
+	        System.out.println(ll);
+    // Retrieval :
+           System.out.println(ll.get(3));
+    // Deletion :
+           ll.remove(1);
+           System.out.println(ll);
+            al.clear();
+            System.out.println(al);
+     // Vertification :
+             System.out.println(ll.contains("S1"));
+           System.out.println(ll.contains(al));
+    // Updation :
+              ll.set(2,"YX");
+               System.out.println(ll);  
+	}
+}
+OUTPUT:     [S1, S2, XY, YY, YZ]
+            YY
+           [S1, XY, YY, YZ]
+           []
+           true
+           false
+           [S1, XY, YX, YZ]
