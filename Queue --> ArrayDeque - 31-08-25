@@ -1,0 +1,32 @@
+import java.util.*;
+public class ADpractice {
+	public static void main(String[] args) {
+		ArrayDeque<String> ad = new ArrayDeque<>();
+     // Adding elements : add,offer,addAll,addFirst,addLast,OfferFirst,OfferLast
+		       ad.add("Badam");
+		       ad.addFirst("kissmiss");
+		       ad.offerLast("Anjeer");
+		       ad.offerFirst("Dates");
+		       ad.offer("pista");
+		       System.out.println(ad);
+		 // Retrieval : peek,peekFirst,peekLast
+		       System.out.println(ad.peek());           // Head
+		       System.out.println(ad.peekFirst());      // Head
+		       System.out.println(ad.peekLast());       // Tail
+		       System.out.println(ad);
+		 //Deletion : poll,pollFirst,pollLast,remove,removeFirst,removeLast,size,clear
+		       System.out.println(ad.remove());
+		       System.out.println(ad.removeFirst());
+		       System.out.println(ad.pollLast());
+		       System.out.println(ad.poll());
+	}
+}
+  OUTPUT: [Dates, kissmiss, Badam, Anjeer, pista]
+Dates
+Dates
+pista
+[Dates, kissmiss, Badam, Anjeer, pista]
+Dates
+kissmiss
+pista
+Badam
