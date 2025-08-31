@@ -1,0 +1,63 @@
+import java.util.*;
+import java.util.Map.Entry;
+public class MPractice
+{
+	public static void main (String[] args)	{
+	 Map<Integer , String> m = new Hashtable<>();   // Same for HashMap , LinkedHashMap , TreeMap
+	   //Adding of elements into the Map :
+         m.put(533440,"Samalkota");
+         m.put(533001,"Kakinada");
+         m.put(530001,"Vizag");
+         System.out.println(m);
+     // Retrieval of keys from the map :
+         Set<Integer> keys = m.keySet();
+         for(Integer key : keys){
+             System.out.println(key);
+        }
+     // Retrieval of values from the map :
+         Collection<String> values = m.values();
+        for(String value : values){
+             System.out.println(value);
+        }
+     // Retrieval of value from the map based on a key :
+         System.out.println(m.get(530001));
+        // both keys and values 
+        for(Integer key : keys){
+             System.out.println(key + " >>>> "+ m.get(key));
+       }
+       // Deletion of elements from the map:
+            //m.remove(533440);
+             m.remove(533440,"Samalkota");
+            System.out.println(m);
+      // Verfication of key in a map :
+               System.out.println(m.containsKey(530001));
+      // Verification of Value in a map :
+           System.out.println(m.containsValue("Kakinada"));
+      // Updation :
+            m.put(530001,"viskhapatnam");
+            System.out.println(m);
+         Set<Entry<Integer, String>> entries = m.entrySet();
+         for (Entry<Integer, String> entry : entries) {
+             Integer key = entry.getKey();
+             String value =  entry.getValue();
+             System.out.println(key +" >>>> "+ value);
+         }
+	}
+}
+OUTPUT: {530001=Vizag, 533001=Kakinada, 533440=Samalkota}
+530001
+533001
+533440
+Vizag
+Kakinada
+Samalkota
+Vizag
+530001 >>>> Vizag
+533001 >>>> Kakinada
+533440 >>>> Samalkota
+{530001=Vizag, 533001=Kakinada}
+true
+true
+{530001=viskhapatnam, 533001=Kakinada}
+530001 >>>> viskhapatnam
+533001 >>>> Kakinada
