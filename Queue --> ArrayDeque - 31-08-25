@@ -1,7 +1,7 @@
 import java.util.*;
 public class ADpractice {
 	public static void main(String[] args) {
-		ArrayDeque<String> ad = new ArrayDeque<>();
+		ArrayDeque<String> ad = new ArrayDeque<>();     // Same for LinkedList --> LinkedList<String> ll = new  LinkedList<>();
      // Adding elements : add,offer,addAll,addFirst,addLast,OfferFirst,OfferLast
 		       ad.add("Badam");
 		       ad.addFirst("kissmiss");
