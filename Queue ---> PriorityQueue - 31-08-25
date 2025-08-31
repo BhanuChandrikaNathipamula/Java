@@ -1,0 +1,29 @@
+import java.util.*;
+public class QPractice {
+	public static void main(String[] args) {
+		//Priority queue :
+	   	PriorityQueue<Integer> pq = new PriorityQueue<>();
+		// Adding elements : offer , add , addAll
+	          	pq.offer(4); // Highest priority --> lowest Integer 
+	          	pq.add(10);
+	          	pq.offer(6);
+	          	pq.offer(1);
+	          	System.out.println(pq);
+		// retrieval : peek
+		          System.out.println(pq.peek()); 
+		// Remove : poll , remove , clear
+          		System.out.println(pq.poll());
+		          System.out.println(pq);
+	          	System.out.println(pq.remove());
+	           	System.out.println(pq);
+		//Verification :
+		         System.out.println(pq.contains(6));
+}
+}
+OUTPUT: [1, 4, 6, 10]
+1
+1
+[4, 10, 6]
+4
+[6, 10]
+true
