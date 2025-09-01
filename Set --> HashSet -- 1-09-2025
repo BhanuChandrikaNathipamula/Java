@@ -1,0 +1,37 @@
+import java.util.HashMap;
+import java.util.Set;
+import java.util.HashSet;
+public class SetPractice {
+	public static void main(String[] args) {
+// Adding elements :
+		Set<Integer> hs = new HashSet<>();
+	 	  hs.add(5);   // unique elements does not allow duplicate values
+		  hs.add(45);
+	  	hs.add(26);
+		  hs.add(5);
+		  hs.add(41);
+	   	hs.add(15);
+    	System.out.println(hs);
+	//Retrieval :
+      for(Integer element : hs) {
+            System.out.println(element);
+          }
+	// Deletion :
+         System.out.println(hs.remove(5));
+         System.out.println(hs);
+  // Verification :
+          System.out.println(hs.contains(41));
+         System.out.println(hs.contains(150));
+	}
+}
+OUTPUT: [5, 41, 26, 45, 15]
+5
+41
+26
+45
+15
+true
+[41, 26, 45, 15]
+true
+false
+
