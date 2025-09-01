@@ -1,0 +1,50 @@
+import java.util.TreeMap;
+import java.util.Set;
+import java.util.TreeSet;
+	public class TSetPractice {
+		public static void main(String[] args) {
+			TreeSet<Integer> ts = new TreeSet<>();
+		// Adding elements :
+			    	ts.add(5);   // unique elements does not allow duplicate values
+				    ts.add(45);
+				    ts.add(26);
+				    ts.add(5);
+			    	ts.add(41);
+			    	ts.add(15);
+			System.out.println(ts); // It will maintain SortedOrder
+		//Retrieval :
+		            for(Integer element : ts) {
+		            	System.out.println(element);
+		            }
+		// Deletion :
+		         System.out.println(ts.remove(5));
+		         System.out.println(ts);
+		// Verification :
+		         System.out.println(ts.contains(41));
+		         System.out.println(ts.contains(150));
+		// Additional Operations :
+		         System.out.println(ts.last());
+		         System.out.println(ts.pollFirst()); // poll --> remove
+		         System.out.println(ts.pollLast());
+		         System.out.println(ts);
+		        System.out.println(ts.subSet(16,65));
+		        System.out.println(ts.descendingSet());
+	}
+}
+OUTPUT : [5, 15, 26, 41, 45]
+5
+15
+26
+41
+45
+true
+[15, 26, 41, 45]
+true
+false
+45
+15
+45
+[26, 41]
+[26, 41]
+[41, 26]
+
