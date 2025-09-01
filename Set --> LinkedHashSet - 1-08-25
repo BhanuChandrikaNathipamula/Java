@@ -1,0 +1,38 @@
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Set;
+public class LHSetPractice {
+			public static void main(String[] args) {
+				LinkedHashSet<Integer> lhs = new LinkedHashSet<>();
+       // Adding elements :
+		    		lhs.add(5);   // unique elements does not allow duplicate values
+			     	lhs.add(15);   
+			    	lhs.add(20);
+				    lhs.add(5);
+				    lhs.add(45);
+			    	lhs.add(12);
+		      	System.out.println(lhs);     //  It will maintain InsertionOrder
+			 //Retrieval :
+		            for(Integer element : lhs) {
+		            	System.out.println(element);
+		            }
+			// Deletion :
+		          System.out.println(lhs.remove(5));
+		          System.out.println(lhs);
+		  // Verification :
+		          System.out.println(lhs.contains(45));
+		          System.out.println(lhs.contains(150));
+			        System.out.println(lhs.isEmpty());
+	}
+}
+OUTPUT : [5, 15, 20, 45, 12]
+5
+15
+20
+45
+12
+true
+[15, 20, 45, 12]
+true
+false
+false
